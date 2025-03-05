@@ -10,7 +10,7 @@ useEffect(()=>{
     setProductos(getAllProducts());
 }, [])
   return (
-    <CarritoContext.Provider value={{productos}}>
+    <CarritoContext.Provider value={{productos, setProductos}}>
         {children}
     </CarritoContext.Provider>
   )
