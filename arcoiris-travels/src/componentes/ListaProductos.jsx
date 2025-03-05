@@ -7,7 +7,7 @@ export const ListaProductos = () => {
 
   return (
     <div>
-      <h1>Lista de productos</h1>
+      <h2>Lista de productos</h2>
       <ul>
         {productos.map((producto) => (
           <li key={producto.id}>
@@ -16,7 +16,7 @@ export const ListaProductos = () => {
             <p>
               {producto.días} días - {producto.precio}€
             </p>
-            <Link to={`/products/${producto.id}`}>Ver detalles</Link>
+            <Link to={`/productos/${producto.id}`}>Ver detalles</Link>
           </li>
         ))}
       </ul>

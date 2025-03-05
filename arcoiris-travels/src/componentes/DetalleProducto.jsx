@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { CarritoContext } from "../contexto/CarritoContex";
 
 const DetalleProducto = () => {
-  const { productos } = useContext(CarritoContext);
+  const { productos, addProductsCarrito} = useContext(CarritoContext);
   const { id } = useParams();
   const [productoDetalle, setProductoDetalle] = useState(null);
 
@@ -31,6 +31,7 @@ const DetalleProducto = () => {
       </p>
       <p>{productoDetalle.hoteles.join(", ")}</p>
       <p>Todo incluido: {productoDetalle.todoIncluido ? "Sí" : "No"}</p>
+      <button onClick={() => addProductsCarrito(productoDetalle)}>Añadir Carrito</button>
     </div>
   );
 };
